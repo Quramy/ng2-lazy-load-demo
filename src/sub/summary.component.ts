@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: "summary",
   template: `
   <div>
-    <h2>Summary Detail</h2>
+    <h3>Summary</h3>
   </div>
   `
 })

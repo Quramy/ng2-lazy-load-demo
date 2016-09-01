@@ -61,7 +61,7 @@ class _View_AboutComponent0 extends import1.AppView<import3.AboutComponent> {
     this._el_1 = this.renderer.createElement(parentRenderNode,'div',(null as any));
     this._text_2 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_3 = this.renderer.createElement(this._el_1,'h2',(null as any));
-    this._text_4 = this.renderer.createText(this._el_3,'About',(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'About Component',(null as any));
     this._text_5 = this.renderer.createText(this._el_1,'\n  ',(null as any));
     this._text_6 = this.renderer.createText(parentRenderNode,'\n  ',(null as any));
     this.init([],[

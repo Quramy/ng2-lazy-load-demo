@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: "top",
   template: `
   <div>
-    <h2>Top!</h2>
+    <h2>Top Component</h2>
   </div>
   `
 })

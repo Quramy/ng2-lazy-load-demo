@@ -60,8 +60,8 @@ class _View_SummaryComponent0 extends import1.AppView<import3.SummaryComponent> 
     this._text_0 = this.renderer.createText(parentRenderNode,'\n  ',(null as any));
     this._el_1 = this.renderer.createElement(parentRenderNode,'div',(null as any));
     this._text_2 = this.renderer.createText(this._el_1,'\n    ',(null as any));
-    this._el_3 = this.renderer.createElement(this._el_1,'h2',(null as any));
-    this._text_4 = this.renderer.createText(this._el_3,'Summary Detail',(null as any));
+    this._el_3 = this.renderer.createElement(this._el_1,'h3',(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'Summary',(null as any));
     this._text_5 = this.renderer.createText(this._el_1,'\n  ',(null as any));
     this._text_6 = this.renderer.createText(parentRenderNode,'\n  ',(null as any));
     this.init([],[

@@ -50,7 +50,7 @@ function viewFactory_MyApp_Host0(viewUtils:import4.ViewUtils,parentInjector:impo
   return new _View_MyApp_Host0(viewUtils,parentInjector,declarationEl);
 }
 export const MyAppNgFactory:import9.ComponentFactory<import3.MyApp> = new import9.ComponentFactory<import3.MyApp>('my-app',viewFactory_MyApp_Host0,import3.MyApp);
-const styles_MyApp:any[] = ['h1[_ngcontent-%COMP%] {\n      color: green;\n    }'];
+const styles_MyApp:any[] = [];
 var renderType_MyApp:import0.RenderComponentType = (null as any);
 class _View_MyApp0 extends import1.AppView<import3.MyApp> {
   _text_0:any;
@@ -91,22 +91,22 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
     this._el_1 = this.renderer.createElement(parentRenderNode,'div',(null as any));
     this._text_2 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_3 = this.renderer.createElement(this._el_1,'h1',(null as any));
-    this._text_4 = this.renderer.createText(this._el_3,'Hello',(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'Angular2 Lazy Module Loading Demo',(null as any));
     this._text_5 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_1,'a',(null as any));
     this.renderer.setElementAttribute(this._el_6,'routerLink','/top');
     this._RouterLinkWithHref_6_3 = new import10.RouterLinkWithHref(this.parentInjector.get(import12.Router),this.parentInjector.get(import13.ActivatedRoute),this.parentInjector.get(import14.LocationStrategy));
-    this._text_7 = this.renderer.createText(this._el_6,'top',(null as any));
+    this._text_7 = this.renderer.createText(this._el_6,'Top',(null as any));
     this._text_8 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_9 = this.renderer.createElement(this._el_1,'a',(null as any));
     this.renderer.setElementAttribute(this._el_9,'routerLink','/about');
     this._RouterLinkWithHref_9_3 = new import10.RouterLinkWithHref(this.parentInjector.get(import12.Router),this.parentInjector.get(import13.ActivatedRoute),this.parentInjector.get(import14.LocationStrategy));
-    this._text_10 = this.renderer.createText(this._el_9,'about',(null as any));
+    this._text_10 = this.renderer.createText(this._el_9,'About',(null as any));
     this._text_11 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_12 = this.renderer.createElement(this._el_1,'a',(null as any));
-    this.renderer.setElementAttribute(this._el_12,'routerLink','/sub/detail');
+    this.renderer.setElementAttribute(this._el_12,'routerLink','/sub');
     this._RouterLinkWithHref_12_3 = new import10.RouterLinkWithHref(this.parentInjector.get(import12.Router),this.parentInjector.get(import13.ActivatedRoute),this.parentInjector.get(import14.LocationStrategy));
-    this._text_13 = this.renderer.createText(this._el_12,'sub detail',(null as any));
+    this._text_13 = this.renderer.createText(this._el_12,'Sub(lazy load)',(null as any));
     this._text_14 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_15 = this.renderer.createElement(this._el_1,'router-outlet',(null as any));
     this._appEl_15 = new import2.AppElement(15,1,this,this._el_15);
@@ -178,7 +178,7 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
     }
     if ((changes !== (null as any))) { this._RouterLinkWithHref_9_3.ngOnChanges(changes); }
     changes = (null as any);
-    const currVal_7:any = '/sub/detail';
+    const currVal_7:any = '/sub';
     if (import4.checkBinding(throwOnChange,this._expr_7,currVal_7)) {
       this._RouterLinkWithHref_12_3.routerLink = currVal_7;
       if ((changes === (null as any))) { (changes = {}); }
@@ -227,6 +227,6 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
   }
 }
 export function viewFactory_MyApp0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.MyApp> {
-  if ((renderType_MyApp === (null as any))) { (renderType_MyApp = viewUtils.createRenderComponentType('/Users/yosuke/workspaces/javascript/ng2-studies/routing-with-lazy-load/src/app/my-app.component.ts class MyApp - inline template',0,import8.ViewEncapsulation.Emulated,styles_MyApp,{})); }
+  if ((renderType_MyApp === (null as any))) { (renderType_MyApp = viewUtils.createRenderComponentType('/Users/yosuke/workspaces/javascript/ng2-studies/routing-with-lazy-load/src/app/my-app.component.ts class MyApp - inline template',0,import8.ViewEncapsulation.None,styles_MyApp,{})); }
   return new _View_MyApp0(viewUtils,parentInjector,declarationEl);
 }

@@ -8,12 +8,14 @@ import * as import0 from '@angular/core/src/linker/ng_module_factory';
 import * as import1 from './sub.module';
 import * as import2 from '@angular/router/src/router_module';
 import * as import3 from '@angular/core/src/di/injector';
-import * as import4 from './detail.component.ngfactory';
+import * as import4 from './sub-home.component.ngfactory';
 import * as import5 from './summary.component.ngfactory';
-import * as import6 from './detail.component';
-import * as import7 from './summary.component';
-import * as import8 from '@angular/router/src/router_config_loader';
-import * as import9 from '@angular/core/src/i18n/tokens';
+import * as import6 from './detail.component.ngfactory';
+import * as import7 from './sub-home.component';
+import * as import8 from './summary.component';
+import * as import9 from './detail.component';
+import * as import10 from '@angular/router/src/router_config_loader';
+import * as import11 from '@angular/core/src/i18n/tokens';
 class SubModuleInjector extends import0.NgModuleInjector<import1.SubModule> {
   _RouterModule_0:import2.RouterModule;
   _SubModule_1:import1.SubModule;
@@ -22,25 +24,31 @@ class SubModuleInjector extends import0.NgModuleInjector<import1.SubModule> {
   __TRANSLATIONS_FORMAT_4:any;
   constructor(parent:import3.Injector) {
     super(parent,[
-      import4.DetailComponentNgFactory,
-      import5.SummaryComponentNgFactory
+      import4.SubHomeComponentNgFactory,
+      import5.SummaryComponentNgFactory,
+      import6.DetailComponentNgFactory
     ]
     ,[]);
   }
   get _ROUTES_2():any[] {
-      if ((this.__ROUTES_2 == (null as any))) { (this.__ROUTES_2 = [[
-        {
-          path: 'detail',
-          component: import6.DetailComponent
-        }
-        ,
-        {
-          path: 'summary',
-          component: import7.SummaryComponent
-        }
+        if ((this.__ROUTES_2 == (null as any))) { (this.__ROUTES_2 = [[{
+          path: '',
+          component: import7.SubHomeComponent,
+          children: [
+            {
+              path: '',
+              component: import8.SummaryComponent
+            }
+            ,
+            {
+              path: 'detail',
+              component: import9.DetailComponent
+            }
 
-      ]
-    ]); }
+          ]
+
+        }
+    ]]); }
     return this.__ROUTES_2;
   }
   get _LOCALE_ID_3():any {
@@ -59,9 +67,9 @@ class SubModuleInjector extends import0.NgModuleInjector<import1.SubModule> {
   getInternal(token:any,notFoundResult:any):any {
     if ((token === import2.RouterModule)) { return this._RouterModule_0; }
     if ((token === import1.SubModule)) { return this._SubModule_1; }
-    if ((token === import8.ROUTES)) { return this._ROUTES_2; }
-    if ((token === import9.LOCALE_ID)) { return this._LOCALE_ID_3; }
-    if ((token === import9.TRANSLATIONS_FORMAT)) { return this._TRANSLATIONS_FORMAT_4; }
+    if ((token === import10.ROUTES)) { return this._ROUTES_2; }
+    if ((token === import11.LOCALE_ID)) { return this._LOCALE_ID_3; }
+    if ((token === import11.TRANSLATIONS_FORMAT)) { return this._TRANSLATIONS_FORMAT_4; }
     return notFoundResult;
   }
   destroyInternal():void {

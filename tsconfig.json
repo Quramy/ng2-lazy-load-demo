@@ -5,12 +5,16 @@
         "noImplicitAny": false,
         "sourceMap": true,
         "outDir": ".built",
-        "rootDir": "src",
+        "rootDir": ".",
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true
     },
     "exclude": [
-        "node_modules"
-    ]
+        "node_modules", "bundle"
+    ],
+    "angularCompilerOptions": {
+      "genDir": ".",
+      "debug": true
+    }
 }

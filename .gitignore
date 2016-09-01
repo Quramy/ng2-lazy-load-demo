@@ -38,3 +38,4 @@ typings
 
 .built/
 dist/
+.awcache/

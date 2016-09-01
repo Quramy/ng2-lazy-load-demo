@@ -1,16 +1,21 @@
 const webpack = require("webpack");
 const path = require("path");
+const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+
 module.exports = {
   resolve: {
     extensions: ["", ".ts", ".js"]
   },
   module: {
     loaders: [
-      {test: /\.ts$/, loader: ["ts-loader", "./loaders/ng2-load-children-loader"], exclude: /node_modules/},
+      {
+        test: /\.ts$/,
+        loader: ["awesome-typescript-loader", "./loaders/ng2-load-children-loader"],
+        exclude: /node_modules/
+      }
     ],
     noParse: [
       path.join(__dirname, "node_modules/zone.js/dist"),
-      path.join(__dirname, "node_modules/reflect-metadata/Reflect.js"),
     ]
   },
   entry: {
@@ -23,22 +28,7 @@ module.exports = {
     filename: "[name].js",
     chunkFilename: "[id].chunk.js",
   },
-  // plugins: [
-  //   new webpack.optimize.CommonsChunkPlugin({
-  //     name: ["client"]
-  //   }),
-  //   new webpack.LoaderOptionsPlugin({
-  //     minimize: true,
-  //     debug: false
-  //   }),
-  //   new webpack.optimize.UglifyJsPlugin({
-  //     compress: {
-  //       warnings: false
-  //     },
-  //     output: {
-  //       comments: false
-  //     },
-  //     sourceMap: false
-  //   })
-  // ],
+  plugins: [
+    new ForkCheckerPlugin()
+  ]
 };

@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
-    "noImplicitAny": false,
+    "target": "es2015",
+    "noImplicitAny": true,
     "sourceMap": false,
     "outDir": ".built",
     "rootDir": ".",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "types": ["node"],
+    "noEmitHelpers": true
   },
-  "exclude": [
-    "node_modules", "bundle", "dist", "loaders"
-    ],
-    "types": ["node", "core-js"],
-    "angularCompilerOptions": {
-      "genDir": ".",
-      "debug": false
-    }
+  "exclude": ["node_modules", "bundle", "dist", "loaders"],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useCache": false,
+    "useBabel": true,
+    "babelCore": "babel-core"
+  },
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "debug": false
+  }
 }

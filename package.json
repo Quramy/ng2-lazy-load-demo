@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "dtsm install",
-    "clean": "rimraf bundle",
+    "clean": "rimraf dist",
+    "ngc": "ngc",
     "webpack": "webpack",
     "watch": "webpack -w",
-    "ngc": "ngc -p tsconfig.json",
-    "start": "browser-sync start --server --files bundle/*.js",
-    "start1": "webpack --config webpack.config.test.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "start": "browser-sync start --server --files bundle/*.js"
   },
   "keywords": [],
   "author": "",
@@ -33,9 +32,12 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "^0.6.0",
+    "@types/core-js": "^0.9.32",
+    "@types/node": "^6.0.38",
     "es6-promise-loader": "^1.0.1",
     "ts-loader": "^0.8.1",
     "typescript": "^2.1.0-dev.20160831",
-    "webpack": "^2.1.0-beta.21"
+    "webpack": "^2.1.0-beta.21",
+    "webpack-merge": "^0.14.1"
   }
 }

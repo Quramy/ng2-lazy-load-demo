@@ -37,4 +37,4 @@ jspm_packages
 typings
 
 .built/
-bundle/
+dist/

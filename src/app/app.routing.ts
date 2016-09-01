@@ -4,16 +4,16 @@ import { TopComponent } from "./top.component";
 import { AboutComponent } from "./about.component";
 import { subRoutes } from "../sub/sub.routing";
 
-// function loadSubModule() {
-//   // Naive
-//   return new Promise(resolve => {
-//     resolve(require("../sub/sub.module")["SubModule"]);
-//   });
-//
-//   // webpack chunk with es6-promise-loader
-//   return require("es6-promise!../sub/sub.module")("SubModule");
-//
-// }
+export function loadSubModule() {
+  // // Naive
+  // return new Promise(resolve => {
+  //   resolve(require("../sub/sub.module")["SubModule"]);
+  // });
+
+  // webpack chunk with es6-promise-loader
+  // return require("es6-promise!../sub/sub.module")("SubModule");
+  return require("es6-promise!../sub/sub.module.ngfactory")("SubModuleNgFactory");
+}
 
 function load(r: any, exportName = "default") {
   // Naive
@@ -23,11 +23,12 @@ function load(r: any, exportName = "default") {
   return r(exportName) as Promise<any>;
 }
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {path: "", pathMatch: "full", redirectTo: "top"},
   {path: "top", component: TopComponent},
   {path: "about", component: AboutComponent },
-  {path: "sub", loadChildren: () => load(require("es6-promise!../sub/sub.module"), "SubModule")},
+  // {path: "sub", loadChildren: () => load(require("es6-promise!../sub/sub.module"), "SubModule")},
+  {path: "sub", loadChildren: loadSubModule},
 ];
 
 export const routing = RouterModule.forRoot(appRoutes, { useHash: true});

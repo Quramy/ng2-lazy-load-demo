@@ -6,8 +6,8 @@
   "scripts": {
     "postinstall": "dtsm install",
     "clean": "rimraf bundle",
-    "watch": "node ./node_modules/webpack/bin/webpack.js -w",
-    "prestart": "node ./node_modules/webpack/bin/webpack.js",
+    "webpack": "webpack",
+    "watch": "webpack -w",
     "start": "browser-sync start --server --files bundle/*.js"
   },
   "keywords": [],
@@ -34,6 +34,6 @@
     "es6-promise-loader": "^1.0.1",
     "ts-loader": "^0.8.1",
     "typescript": "^2.1.0-dev.20160831",
-    "webpack": "^1.13.0"
+    "webpack": "^2.1.0-beta.21"
   }
 }

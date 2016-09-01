@@ -14,7 +14,8 @@ module.exports = {
     ]
   },
   entry: {
-    client: "./src/index"
+    // client: "./src/index"
+    client: "./src/index-aot"
   },
   output: {
     path: path.resolve(__dirname, "bundle"),
@@ -26,5 +27,18 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ["client"]
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      },
+      output: {
+        comments: false
+      },
+      sourceMap: false
+    })
   ],
 };

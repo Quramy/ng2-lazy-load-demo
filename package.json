@@ -1,5 +1,5 @@
 {
-  "name": "routing-with-lazy-load",
+  "name": "ng2-lazy-load-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "start": "browser-sync start --server --files dist/*.js --files *.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Quramy",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "2.0.0-rc.6",
@@ -38,6 +38,7 @@
     "awesome-typescript-loader": "^2.2.1",
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.14.3",
     "es6-promise-loader": "^1.0.1",
     "rimraf": "^2.5.4",
     "ts-helpers": "^1.1.1",

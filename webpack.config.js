@@ -11,6 +11,7 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: ["awesome-typescript-loader", "angular2-load-children-loader"],
+        // loader: ["awesome-typescript-loader"],
         exclude: /node_modules/
       }
     ],

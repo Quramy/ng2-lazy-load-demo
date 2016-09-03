@@ -1,7 +1,7 @@
 import { NgModuleFactoryLoader } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { MainHomeComponent } from "../main/main-home.component";
-import { MainAboutComponent } from "../main/main-about.component";
+import { MainHomeComponent } from "./main-home.component";
+import { MainAboutComponent } from "./main-about.component";
 
 //
 // import { SubAppComponent } from "../sub/sub-app.component";

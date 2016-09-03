@@ -9,7 +9,7 @@
     "ngc": "ngc",
     "webpack": "webpack",
     "watch": "webpack -w",
-    "build": "webpack --config webpack.config.prod.js",
+    "build": "npm run ngc && webpack --config webpack.config.prod.js",
     "start": "browser-sync start --server --files dist/*.js --files *.html"
   },
   "keywords": [],

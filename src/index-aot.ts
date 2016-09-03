@@ -4,6 +4,6 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
 import { platformBrowser } from '@angular/platform-browser';
-import { AppModuleNgFactory } from "./app/app.module.ngfactory";
+import { MainModuleNgFactory } from "./main/main.module.ngfactory";
 
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+platformBrowser().bootstrapModuleFactory(MainModuleNgFactory);

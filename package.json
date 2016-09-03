@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
+    "clean:ngc": "rimraf src/**/*.ngfactory.ts",
     "ngc": "ngc",
     "webpack": "webpack",
     "watch": "webpack -w",
@@ -38,6 +39,7 @@
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "es6-promise-loader": "^1.0.1",
+    "rimraf": "^2.5.4",
     "ts-helpers": "^1.1.1",
     "typescript": "^2.1.0-dev.20160831",
     "webpack": "^2.1.0-beta.21",

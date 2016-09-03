@@ -10,7 +10,7 @@
     "webpack": "webpack",
     "watch": "webpack -w",
     "build": "webpack --config webpack.config.prod.js",
-    "start": "browser-sync start --server --files bundle/*.js"
+    "start": "browser-sync start --server --files dist/*.js --files *.html"
   },
   "keywords": [],
   "author": "",

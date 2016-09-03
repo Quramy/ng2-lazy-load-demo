@@ -39,3 +39,4 @@ typings
 .built/
 dist/
 .awcache/
+*.ngfactroy.ts

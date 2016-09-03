@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "detail",
+  selector: "main-home",
   template: `
   <div>
-    <h3>Detail Component</h3>
+    <h2>Main Home Component</h2>
   </div>
   `
 })
-export class DetailComponent {
+export class MainHomeComponent {
 }

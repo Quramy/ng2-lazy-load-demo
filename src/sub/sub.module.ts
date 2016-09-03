@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { subRouting } from "./sub.routing";
-import { DetailComponent } from "./detail.component";
-import { SummaryComponent } from "./summary.component";
+import { SubAppComponent } from "./sub-app.component";
 import { SubHomeComponent } from "./sub-home.component";
 
 @NgModule({
@@ -9,9 +8,8 @@ import { SubHomeComponent } from "./sub-home.component";
     subRouting,
   ],
   declarations: [
+    SubAppComponent,
     SubHomeComponent,
-    DetailComponent,
-    SummaryComponent,
   ],
 })
 export class SubModule {

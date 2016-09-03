@@ -3,8 +3,9 @@ import { Component } from "@angular/core";
 @Component({
   selector: "sub-home",
   template: `
-    <h3>Sub Home Component</h3>
+    <h2>Sub App</h2>
+    <router-outlet></router-outlet>
   `
 })
-export class SubHomeComponent {
+export class SubAppComponent {
 }

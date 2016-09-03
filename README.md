@@ -1,4 +1,4 @@
-# Angular2 Lay Load Demo
+# Angular2 Lazy Module Loading Demo
 
 It's a sample repository to explain how to lazy module loading in your Angular2 App with webpack2.
 

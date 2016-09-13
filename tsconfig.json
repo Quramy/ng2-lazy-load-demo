@@ -12,7 +12,7 @@
     "types": ["node"],
     "noEmitHelpers": true
   },
-  "exclude": ["node_modules", "bundle", "dist", "loaders"],
+  "exclude": ["node_modules", "bundle", "dist", "loaders", "src/index-aot.ts"],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useCache": true,

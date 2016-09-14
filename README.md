@@ -105,3 +105,5 @@ And the following part of webpack.config.js is important:
 
 // ...
 ```
+
+Please see also [https://github.com/Quramy/angular2-load-children-loader](https://github.com/Quramy/angular2-load-children-loader).

@@ -55,8 +55,8 @@ export const appRoutes: Routes = [
   // See the loadSubModule function in this code.
   // {path: "sub", loadChildren: loadSubModule},
 
-  /* 3. Auto switching module or moduleFactory with angular2-load-children-loader */
-  // See the loader section of webpack.config.js .
+  /* 3. Auto switching the module to load with angular2-load-children-loader */
+  // See the loaders section of webpack.config.js .
   {path: "sub", loadChildren: "es6-promise!../sub/sub.module#SubModule" },
 
 ];
@@ -86,7 +86,7 @@ And the following part of webpack.config.js is important:
     loaders: [
       {
         test: /\.ts$/,
-        loader: [
+        loaders: [
           "awesome-typescript-loader",
           "angular2-load-children-loader" // this loader replace loadChildren value to function to call require.
         ],

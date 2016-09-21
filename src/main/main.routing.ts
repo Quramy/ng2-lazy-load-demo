@@ -29,7 +29,7 @@ export const appRoutes: Routes = [
 
   /* 3. Auto switching module or moduleFactory with angular2-load-children-loader */
   // See the loader section of webpack.config.js .
-  {path: "sub", loadChildren: "es6-promise!../sub/sub.module#SubModule" },
+  {path: "sub", loadChildren: "es6-promise?,[name]!../sub/sub.module#SubModule" },
 
 ];
 

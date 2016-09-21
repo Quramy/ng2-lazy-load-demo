@@ -27,7 +27,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "http://localhost:3000/dist/",
     filename: "[name].js",
-    chunkFilename: "[id].chunk.js",
+    chunkFilename: "[name].chunk.js",
   },
   plugins: [
     new ForkCheckerPlugin()

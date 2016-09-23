@@ -39,7 +39,7 @@ export const appRoutes: Routes = [
   {path: "about", component: MainAboutComponent },
 
   /* 1. Simple nested routing: */
-  // The fllowing configuration allows to nested routing
+  // The following configuration allows to nested routing.
   // But the sub components are included bundle.js so the browser loads them on init.
   //
   // {
@@ -55,9 +55,9 @@ export const appRoutes: Routes = [
   // See the loadSubModule function in this code.
   // {path: "sub", loadChildren: loadSubModule},
 
-  /* 3. Auto switching the module to load with angular2-load-children-loader */
-  // See the loaders section of webpack.config.js .
-  {path: "sub", loadChildren: "es6-promise!../sub/sub.module#SubModule" },
+  /* 3. Auto switching module or moduleFactory with angular2-load-children-loader */
+  // See the loader section of webpack.config.js .
+  {path: "sub", loadChildren: "es6-promise?,[name]!../sub/sub.module#SubModule" },
 
 ];
 
@@ -67,8 +67,8 @@ export const appRoutes: Routes = [
 //   // return SubModule;
 //
 //   // 2-2 Async module load with es6-promise-loader:
-//   // You can use create submodule's chunk with webpack es6-promise-loader.
-//   // However you should switch the module to laad with the context:
+//   // You can create submodule's chunk with webpack es6-promise-loader.
+//   // However you should switch the module to load with the context:
 //   // * JiT:
 //   // return require("es6-promise!../sub/sub.module")("SubModule");
 //   // * AoT:
@@ -100,7 +100,7 @@ And the following part of webpack.config.js is important:
     path: path.resolve(__dirname, "dist"),
     publicPath: "http://localhost:3000/dist/",
     filename: "[name].js",
-    chunkFilename: "[id].chunk.js", // the chunk files are created by es6-promise-loader.
+    chunkFilename: "[name].chunk.js", // the chunk files are created by es6-promise-loader.
   },
 
 // ...

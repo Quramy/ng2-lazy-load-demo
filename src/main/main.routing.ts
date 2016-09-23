@@ -11,7 +11,7 @@ export const appRoutes: Routes = [
   {path: "about", component: MainAboutComponent },
 
   /* 1. Simple nested routing: */
-  // The fllowing configuration allows to nested routing
+  // The following configuration allows to nested routing.
   // But the sub components are included bundle.js so the browser loads them on init.
   //
   // {
@@ -39,8 +39,8 @@ export const appRoutes: Routes = [
 //   // return SubModule;
 //
 //   // 2-2 Async module load with es6-promise-loader:
-//   // You can use create submodule's chunk with webpack es6-promise-loader.
-//   // However you should switch the module to laad with the context:
+//   // You can create submodule's chunk with webpack es6-promise-loader.
+//   // However you should switch the module to load with the context:
 //   // * JiT:
 //   // return require("es6-promise!../sub/sub.module")("SubModule");
 //   // * AoT:

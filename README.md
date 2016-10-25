@@ -90,7 +90,6 @@ And the following part of webpack.config.js is important:
           "awesome-typescript-loader",
           "angular2-load-children-loader" // this loader replace loadChildren value to function to call require.
         ],
-        exclude: /node_modules/
       }
     ],
 

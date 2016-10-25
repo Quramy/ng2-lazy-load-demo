@@ -4,14 +4,13 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 
 module.exports = {
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".js", ".ts"],
   },
   module: {
     loaders: [
       {
         test: /\.ts$/,
         loader: ["awesome-typescript-loader", "angular2-load-children-loader"],
-        exclude: /node_modules/
       }
     ],
     noParse: [

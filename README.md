@@ -57,7 +57,7 @@ export const appRoutes: Routes = [
 
   /* 3. Auto switching module or moduleFactory with angular2-load-children-loader */
   // See the loader section of webpack.config.js .
-  {path: "sub", loadChildren: "es6-promise?,[name]!../sub/sub.module#SubModule" },
+  {path: "sub", loadChildren: "es6-promise-loader?,[name]!../sub/sub.module#SubModule" },
 
 ];
 
@@ -70,9 +70,9 @@ export const appRoutes: Routes = [
 //   // You can create submodule's chunk with webpack es6-promise-loader.
 //   // However you should switch the module to load with the context:
 //   // * JiT:
-//   // return require("es6-promise!../sub/sub.module")("SubModule");
+//   // return require("es6-promise-loader!../sub/sub.module")("SubModule");
 //   // * AoT:
-//   // return require("es6-promise!../sub/sub.module.ngfactory")("SubModuleNgFactory");
+//   // return require("es6-promise-loader!../sub/sub.module.ngfactory")("SubModuleNgFactory");
 // }
 
 export const routing = RouterModule.forRoot(appRoutes, { useHash: true});
@@ -83,15 +83,20 @@ And the following part of webpack.config.js is important:
 ```js
 /* webpack.config.js */
 // ...
-    loaders: [
-      {
-        test: /\.ts$/,
-        loaders: [
-          "awesome-typescript-loader",
-          "angular2-load-children-loader" // this loader replace loadChildren value to function to call require.
-        ],
-      }
-    ],
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          loader: [
+            "ts-loader",
+            "angular2-load-children-loader" // this loader replace loadChildren value to function to call require.
+          ],
+        }
+      ],
+      noParse: [
+        /zone\.js\/dist/,
+      ]
+    },
 
 // ...
 

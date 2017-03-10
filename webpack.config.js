@@ -9,7 +9,11 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        loader: ["babel-loader", "angular2-load-children-loader", "light-ts-loader"],
+        loader: [
+          "babel-loader",
+          "angular2-load-children-loader",
+          "light-ts-loader"
+        ],
       }
     ],
     noParse: [

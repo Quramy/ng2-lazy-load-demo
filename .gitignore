@@ -40,3 +40,4 @@ typings
 dist/
 .awcache/
 src/**/*.ngfactory.ts
+src/**/*.ngsummary.json

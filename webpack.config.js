@@ -1,20 +1,19 @@
 const webpack = require("webpack");
 const path = require("path");
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 module.exports = {
   resolve: {
     extensions: [".js", ".ts"],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loader: ["awesome-typescript-loader", "angular2-load-children-loader"],
+        loader: ["babel-loader", "angular2-load-children-loader", "light-ts-loader"],
       }
     ],
     noParse: [
-      path.join(__dirname, "node_modules/zone.js/dist"),
+      /zone\.js\/dist/,
     ]
   },
   entry: {
@@ -27,7 +26,4 @@ module.exports = {
     filename: "[name].js",
     chunkFilename: "[name].chunk.js",
   },
-  plugins: [
-    new ForkCheckerPlugin()
-  ]
 };

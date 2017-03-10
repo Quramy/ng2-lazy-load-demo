@@ -10,15 +10,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "types": ["node"],
+    "importHelpers": true,
     "noEmitHelpers": true
   },
   "exclude": ["node_modules", "bundle", "dist", "loaders", "src/index-aot.ts"],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useCache": true,
-    "useBabel": true,
-    "babelCore": "babel-core"
-  },
   "angularCompilerOptions": {
     "genDir": ".",
     "debug": false

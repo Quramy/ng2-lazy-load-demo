@@ -1,5 +1,7 @@
 # Angular2 Lazy Module Loading Demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Quramy/ng2-lazy-load-demo.svg)](https://greenkeeper.io/)
+
 It's a sample repository to explain how to lazy module loading in your Angular2 App with webpack2.
 
 This repository includes JiT(Just in Time) and AoT(Ahead of Time) demos.
